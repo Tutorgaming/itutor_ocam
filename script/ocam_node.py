@@ -36,7 +36,7 @@ class OCamInterface(object):
         # Instantiate Camera with Verbose for collecting data
         self.camera = liboCams.oCams(
             self.camera_path,
-            verbose=True
+            verbose=1
         )
         # Collecting Data
         self.gathering_camera_data(self.camera)
@@ -53,7 +53,7 @@ class OCamInterface(object):
             self.camera.Close()
             self.camera = liboCams.oCams(
                 self.camera_path,
-                verbose=verbose_flag
+                verbose=0
             )
 
         # Start Camera instance !
