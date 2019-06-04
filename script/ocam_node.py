@@ -103,9 +103,9 @@ if __name__ == '__main__':
     ocam = OCamInterface()
     image_converter = ImageConverter()
     # Loop
-    rate = rospy.Rate(60) # 10hz
+    # rate = rospy.Rate(60) # 60hz
     while not rospy.is_shutdown():
         rospy.loginfo("test")
         mat = ocam.get_image()
         image_converter.publish(mat)
-        rate.sleep()
+        # rate.sleep()

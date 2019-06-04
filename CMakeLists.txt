@@ -9,6 +9,7 @@ project(itutor-ocam)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
+  rospy
   image_transport
   sensor_msgs
 )
@@ -160,19 +161,19 @@ include_directories(
 # )
 
 # Place holder for new node
-add_executable(test_opencv src/test_opencv.cpp)
-add_dependencies(test_opencv ${catkin_EXPORTED_TARGETS})
-target_link_libraries(test_opencv
-  ${catkin_LIBRARIES}
-  ${OpenCV_LIBRARIES}
-)
+# add_executable(test_opencv src/test_opencv.cpp)
+# add_dependencies(test_opencv ${catkin_EXPORTED_TARGETS})
+# target_link_libraries(test_opencv
+#   ${catkin_LIBRARIES}
+#   ${OpenCV_LIBRARIES}
+# )
 
-add_executable(ocam src/ocam.cpp)
-add_dependencies(ocam ${catkin_EXPORTED_TARGETS})
-target_link_libraries(ocam
-  ${catkin_LIBRARIES}
-  ${OpenCV_LIBRARIES}
-)
+# add_executable(ocam src/ocam.cpp)
+# add_dependencies(ocam ${catkin_EXPORTED_TARGETS})
+# target_link_libraries(ocam
+#   ${catkin_LIBRARIES}
+#   ${OpenCV_LIBRARIES}
+# )
 
 
 #############
