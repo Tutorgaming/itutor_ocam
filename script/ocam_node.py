@@ -73,6 +73,7 @@ class OCamInterface(object):
         """
         # Get Image from Camera
         camera_mat = self.camera.GetFrame()
+        rgb = cv2.cvtColor(camera_mat, cv2.COLOR_YUV2BGR_YUYV)
         return camera_mat
 
 
