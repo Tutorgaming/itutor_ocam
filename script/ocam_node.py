@@ -65,8 +65,8 @@ class OCamInterface(object):
         Arguments:
             camera {libOCams Camera} -- Camera instance from driver
         """
-        self.camera_format_list = camera.getFormatList()
-        self.camera_control_list = camera.getControlList()
+        self.camera_format_list = camera.GetFormatList()
+        self.camera_control_list = camera.GetControlList()
 
     def get_image(self):
         """Get the image Data and publish into ROS World :)
