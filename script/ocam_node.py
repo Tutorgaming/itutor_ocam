@@ -41,6 +41,13 @@ class OCamInterface(object):
         # Collecting Data
         self.gathering_camera_data(self.camera)
 
+        # Camera setting reassign (?)
+        for i in range(len(self.camera_format_list)):
+            self.camera.Set(self.camera_format_list[i])
+
+        self.camera_name = self.camera.GetName()
+        rospy.loginfo("Currently Connecting to Camera : " + str(self.camera_name))
+
         # Mute Data Printing if verbose is false
         if verbose_flag is False:
             self.camera.Close()
