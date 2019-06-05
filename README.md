@@ -14,4 +14,5 @@ Require :
 TODO : 
  - add proper launch file for customized launch 
  - add dynamic reconfigure for on-the-fly parameter adjustment
+ - add camera calibration node for finding proper parameter to fix distortion and pixel correction
  
